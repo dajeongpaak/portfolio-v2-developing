@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+body {
+    background: $color-primary-light;
+    font-family: $font-inter;
+    line-height: 1.5;
+    position: relative;
+}
+
+section {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 1rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}  
+
+a {
+    text-decoration: none;
+    color: $color-primary-dark;
+}

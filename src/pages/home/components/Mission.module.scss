@@ -1,0 +1,9 @@
+@use '../../../styles/abstracts' as *;
+@use '../../../styles/layouts' as *;
+@use '../../../styles/base' as *;
+
+._container {
+    // height: 100%;
+    background-color: $color-highlight-orange;
+    border-radius: $border-radious-sm;
+}

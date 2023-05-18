@@ -1,0 +1,36 @@
+@use '../../styles/abstracts' as *;
+@use '../../styles/layouts' as *;
+@use '../../styles/base' as *;
+
+._container {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav {
+   color: $color-primary-dark;
+   font-size: $font-size-h5;
+
+   &__logo {
+    font-weight: $font-weight-900;
+   }
+
+   &__item {
+    font-weight: $font-weight-400;
+   }
+
+   ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+   }
+
+   li {
+    padding: .5rem 1rem 0 0;
+   }
+
+   a {
+    padding: .5rem 0;
+   }
+}
