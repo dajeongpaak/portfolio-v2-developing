@@ -38,6 +38,8 @@ h6,
     font-size: $font-size-h6;
 }
 
-p {
+p,
+.p {
+    font-family: $font-inter;
     font-size: $font-size-p;
 }

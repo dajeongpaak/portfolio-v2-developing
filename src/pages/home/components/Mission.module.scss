@@ -1,9 +1,25 @@
-@use '../../../styles/abstracts' as *;
-@use '../../../styles/layouts' as *;
-@use '../../../styles/base' as *;
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+// @use '../../../styles/layouts' as *;
 
-._container {
-    // height: 100%;
+.container {
     background-color: $color-highlight-orange;
     border-radius: $border-radious-sm;
+}
+
+.content {
+    margin-top: 5.5rem;
+    padding: 0 1rem;
+}
+
+.values {
+    background: $color-primary-light;
+    padding: 1rem 0;
+    border-radius: 7rem;
+    line-height: 1.8;
+    @include flex-center;
+}
+
+.values:last-child {
+    margin-bottom: 3rem;
 }
