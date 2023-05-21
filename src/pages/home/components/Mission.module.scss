@@ -3,23 +3,19 @@
 // @use '../../../styles/layouts' as *;
 
 .container {
-    background-color: $color-highlight-orange;
-    border-radius: $border-radious-sm;
+    margin: 3rem 0;
 }
 
 .content {
-    margin-top: 5.5rem;
-    padding: 0 1rem;
+    font-weight: $font-weight-400;
+    color: $color-primary-light;
+}
+
+.statement {
+    @include block($color-primary-dark);
 }
 
 .values {
-    background: $color-primary-light;
-    padding: 1rem 0;
-    border-radius: 7rem;
-    line-height: 1.8;
-    @include flex-center;
+    @include block($color-highlight-orange);
 }
 
-.values:last-child {
-    margin-bottom: 3rem;
-}

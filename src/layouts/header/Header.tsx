@@ -8,7 +8,7 @@ import styles from './Header.module.scss'
 
 function Header() {
   return ( 
-    <header className={styles._container}> 
+    <header className={styles.container}> 
       <nav className={styles.nav}>
           <ul className={styles.flex}>
             <li className={styles.nav__logo}>

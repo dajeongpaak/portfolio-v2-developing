@@ -1,0 +1,27 @@
+@use '../../styles/abstracts/variables' as *;
+@use '../../styles/abstracts/mixins' as *;
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    height: calc(100vh - $header-height);
+    @include flex-center;
+    align-items: flex-start;
+    flex-direction: column;
+    background: $color-primary-light;
+    border-radius: $border-radious-sm;
+    padding: 0 1rem;
+
+    &:last-child {
+        margin-bottom: $header-height;
+    }
+}
+
+h4 {
+    font-weight: 600;
+}
+p {
+    margin-bottom: 1.5rem;
+}

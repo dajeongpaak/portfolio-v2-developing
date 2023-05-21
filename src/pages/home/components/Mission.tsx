@@ -3,20 +3,18 @@ import styles from './Mission.module.scss'
 
 function Mission() {
   return (
-    <>
-    <section className={`${styles.container} grid`}>
-       <div className={`col-8 ${styles.content}`}>
-         <h2 className='p'>I develop and design engaging user experiences that brings emotional connection through
+    <div className={`${styles.container} grid container`}>
+      <div className={`${styles.statement} col-12`}>
+          <h2 className={`${styles.content} h5`}>I <span>develop and design</span> <br /> engaging user experiences <br /> that brings <br/><span>emotional connection</span> through
          </h2>
-       </div> 
-       <div className={`${styles.values} col-12`}>
-         <h3 className='h5'>Creativity, <br />Lifelong Learning</h3>
-       </div>
-       <div className={`${styles.values} col-12`}>
-        <h3 className='h5'>Technology Skills <br />& Passion</h3>
-       </div>
-   </section> 
-   </>
+      </div>
+      <div className={`${styles.values} col-12`}>
+          <span className={`${styles.content} h5`}>Creativity, <br />Lifelong Learning,
+         </span><br />
+         <span className={`${styles.content} h5`}>Technology Skills <br />& Passion
+         </span>
+      </div>
+   </div> 
   )
 }
 

@@ -12,12 +12,17 @@ section {
 }
 
 .container {
-    padding: 0 1rem;
+    padding: 0 .5rem;
     max-width: 90rem;
     margin: 0 auto;
+
+    @include mq(large) {
+        padding: 0 1rem;
+    }
 }  
 
 a {
     text-decoration: none;
     color: $color-primary-dark;
 }
+

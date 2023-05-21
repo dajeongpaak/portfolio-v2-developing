@@ -1,0 +1,14 @@
+@use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
+
+.container {
+    background: $color-primary-dark;
+}
+
+.title {
+    color: $color-primary-dark;
+    text-transform: uppercase;
+    text-align: center;
+    @include block($color-primary-light);
+    font-weight: $font-weight-700;
+}

@@ -1,5 +1,5 @@
-import React from 'react'
 
+import FeaturedWork from './components/FeaturedWork'
 import Hero from './components/Hero'
 import Mission from './components/Mission'
 
@@ -9,6 +9,7 @@ function Home() {
     <>
       <Hero/>
       <Mission />
+      <FeaturedWork />
     </>
   )
 }

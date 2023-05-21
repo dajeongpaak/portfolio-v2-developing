@@ -1,16 +1,16 @@
 @use '../../styles/abstracts' as *;
-@use '../../styles/layouts' as *;
-@use '../../styles/base' as *;
 
-._container {
+.container {
     width: 100%;
     position: fixed;
     z-index: 999;
+    bottom: 0;
 }
 
 .nav {
-   color: $color-primary-dark;
    font-size: $font-size-h5;
+   background: $color-primary-light;
+   height: $header-height;
 
    &__logo {
     font-weight: $font-weight-900;
@@ -22,12 +22,11 @@
 
    ul {
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    justify-content: space-evenly;
    }
 
    li {
-    padding: .5rem 1rem 0 0;
+    padding: 0.1rem 0;
    }
 
    a {

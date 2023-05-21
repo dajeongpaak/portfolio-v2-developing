@@ -3,7 +3,7 @@
 @for $i from 1 through 6 {
     h#{$i},
     .h#{$i} {
-        font-family: $font-michroma;
+        font-family: $font-inter;
         margin-bottom: 0.5rem;
     }
 }
@@ -42,4 +42,13 @@ p,
 .p {
     font-family: $font-inter;
     font-size: $font-size-p;
+}
+
+span {
+    font-style: $font-ital;
+    font-weight: $font-weight-500;
+}
+
+.desc {
+    font-size: $font-size-14p;
 }
