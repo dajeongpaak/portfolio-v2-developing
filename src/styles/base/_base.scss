@@ -1,5 +1,8 @@
 @use '../abstracts' as *;
 
+* {
+    scroll-behavior: smooth;
+}
 body {
     background: $color-primary-light;
     font-family: $font-inter;

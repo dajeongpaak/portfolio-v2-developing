@@ -7,12 +7,13 @@
 }
 
 .content {
-    font-weight: $font-weight-400;
+
     color: $color-primary-light;
 }
 
 .statement {
     @include block($color-primary-dark);
+    font-weight: 300;
 }
 
 .values {

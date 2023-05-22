@@ -1,27 +1,38 @@
 @use '../../styles/abstracts/variables' as *;
 @use '../../styles/abstracts/mixins' as *;
 
-img {
-    max-width: 100%;
-}
-
 .card {
-    height: calc(100vh - $header-height);
+    position: relative;
     @include flex-center;
     align-items: flex-start;
     flex-direction: column;
     background: $color-primary-light;
-    border-radius: $border-radious-sm;
-    padding: 0 1rem;
+    @include block($color-primary-light);
 
     &:last-child {
         margin-bottom: $header-height;
     }
+
+    svg {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 1.3rem;
+        fill: $color-primary-dark;
+    }
 }
 
+
+
 h4 {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.8rem;
 }
+
 p {
     margin-bottom: 1.5rem;
+}
+
+img {
+    max-width: 100%;
 }

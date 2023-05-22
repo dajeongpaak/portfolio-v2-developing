@@ -1,0 +1,55 @@
+@use '../../styles/abstracts' as *;
+
+.container {
+    background: $color-primary-dark;
+    position: relative;
+}
+
+.getInTouch {
+    @include block($color-primary-light);
+    @include flex-center;
+    text-transform: uppercase;
+    padding: 2.5rem 1.5rem;
+    color: $color-primary-dark;
+    font-size: $font-size-h3;
+    font-weight: 400;
+}
+
+.contact {
+    @include block($color-highlight-orange);
+    @include flex-center;
+    padding: 6rem 1.5rem;
+    margin-bottom: 2rem;
+
+    a {
+        color: $color-primary-light;
+    }
+}
+
+.socialMedia {
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+    margin: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-primary-light;
+
+    p {
+        margin-bottom: unset;
+        margin-left: 2rem;
+    }
+
+    &__icon {
+        display: flex;
+        margin-right: 2rem;
+        svg {
+            // padding: 0 0.5rem;
+            width: 1.5rem;
+            fill: $color-primary-light;
+            padding-left: 1rem;
+        }
+    
+    }
+}
