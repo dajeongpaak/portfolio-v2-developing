@@ -3,7 +3,7 @@
 
 .container {
     background: $color-primary-dark;
-    padding-top: 3rem;
+    padding-top: $header-height;
 }
 
 .title {
@@ -13,4 +13,8 @@
     @include block($color-primary-light);
     padding: 2.5rem 1.5rem;
     font-weight: 400;
+}
+
+h3 {
+    margin-bottom: unset;
 }

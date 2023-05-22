@@ -19,7 +19,7 @@
     @include block($color-highlight-orange);
     @include flex-center;
     padding: 6rem 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: $header-height;
 
     a {
         color: $color-primary-light;
@@ -29,7 +29,7 @@
 .socialMedia {
     width: 100%;
     position: absolute;
-    bottom: 2rem;
+    bottom: $header-height;
     margin: .5rem;
     display: flex;
     justify-content: space-between;

@@ -3,11 +3,10 @@
 // @use '../../../styles/layouts' as *;
 
 .container {
-    margin: 3rem 0;
+    margin: $header-height 0;
 }
 
 .content {
-
     color: $color-primary-light;
 }
 
