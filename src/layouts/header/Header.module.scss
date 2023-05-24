@@ -5,6 +5,10 @@
     position: fixed;
     z-index: 999;
     bottom: 0;
+
+    @include mq(large){
+        bottom: unset;
+    }
 }
 
 .nav {
@@ -22,10 +26,18 @@
    ul {
     display: flex;
     justify-content: space-evenly;
+
+    @include mq(large){
+        justify-content: space-between;
+    }
    }
 
    li {
-    padding: 1rem 0;
+    padding: 1rem ;
+
+    @include mq(large){
+        padding: 1rem 2rem;
+    }
    }
 
    a {

@@ -1,21 +1,55 @@
-@use '../../../styles/abstracts/variables' as *;
-@use '../../../styles/abstracts/mixins' as *;
-// @use '../../../styles/layouts' as *;
+@use '../../../styles/abstracts' as *;
 
 .container {
-    margin: $header-height 0;
-}
-
-.content {
-    color: $color-primary-light;
+    position: relative;
+    padding: 3rem 0;
+    max-width: 90rem;
+    height: 80vh;
+    overflow: hidden;
 }
 
 .statement {
-    @include block($color-primary-dark);
     font-weight: 300;
+    color: $color-primary-dark;
+    padding: 0 2rem;
+    align-self: center;
 }
 
 .values {
-    @include block($color-highlight-orange);
+    padding: 0 2rem;
+    color: $color-primary-light;
+    align-self: self-start;
+    mix-blend-mode: difference;
+    z-index: 1;
+
+    @include mq(small) {
+        align-self: self-start;
+    }
+
+}
+
+.js_animation {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vh;
+    height: 15rem;
+    border-radius: 50%;
+    background: $color-primary-dark;
+
+    @include mq(xsmall){
+        bottom: -20%;
+    }
+
+    @include mq(small) {
+        bottom: -10%;
+    }
+
+    @include mq(large) {
+        bottom: -10%;
+    }
+
+    
 }
 

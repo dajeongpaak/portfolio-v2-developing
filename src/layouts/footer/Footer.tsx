@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className={`${styles.container} grid container`}>
        <div className={`${styles.getInTouch} col-12`}>
-          Get In Touch!
+          <p className='h4'>Get In Touch!</p>
        </div>
        <div className={`${styles.contact} col-12 h5`}>
           <div>

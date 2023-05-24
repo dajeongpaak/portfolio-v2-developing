@@ -4,44 +4,79 @@
     h#{$i},
     .h#{$i} {
         font-family: $font-inter;
-        margin-bottom: 0.5rem;
     }
 }
 
 h1, 
 .h1 {
-    font-size: $font-size-h1;
+    font-size:  2.5rem;
+
+    @include mq(small) {
+        font-size:  2.6rem;
+    }
 }
   
 h2, 
 .h2 {
-    font-size: $font-size-h2;
+    font-size: 2rem;
+
+    @include mq(small) {
+        font-size: 2.1rem;
+    }
+
+    @include mq(medium) {
+        font-size: 2.3rem;
+    }
 }
   
 h3, 
 .h3 {
-    font-size: $font-size-h3;
+    font-size: 1.75rem;
+
+    @include mq(small) {
+        font-size: 1.85rem;
+    }
+
+    @include mq(medium) {
+        font-size: 2rem;
+    }
 }
   
 h4, 
 .h4 {
-    font-size: $font-size-h4;
+    font-size: 1.5rem;
+
+    @include mq(small) {
+        font-size: 1.6rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.8rem;
+    }
 }
   
 h5, 
 .h5 {
-    font-size: $font-size-h5;
+    font-size: 1.25rem;
+
+    @include mq(small) {
+        font-size: 1.35rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.5rem;
+    }
 }
   
 h6, 
 .h6 {
-    font-size: $font-size-h6;
+    font-size: 1rem;
 }
 
 p,
 .p {
     font-family: $font-inter;
-    font-size: $font-size-p;
+    font-size: 1rem;
 }
 
 span {
@@ -50,5 +85,13 @@ span {
 }
 
 .desc {
-    font-size: $font-size-14p;
+    font-size: 0.875rem;
+
+    @include mq(small) {
+        font-size: 1rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.15rem;
+    }
 }

@@ -3,7 +3,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 0.5rem;
+    // column-gap: 0.5rem;
 }
 
 @for $i from 1 through 12 {
@@ -15,7 +15,7 @@
 @include mq(small) {
 
     @for $i from 1 through 12 {
-    .col-#{$i}-sm {
+    .col-sm-#{$i} {
         grid-column: span #{$i};
     }
     }
@@ -25,7 +25,7 @@
 @include mq(medium) {
 
     @for $i from 1 through 12 {
-    .col-#{$i}-md {
+    .col-md-#{$i} {
         grid-column: span #{$i};
     }
     }
@@ -35,7 +35,7 @@
 @include mq(large) {
 
     @for $i from 1 through 12 {
-    .col-#{$i}-lg {
+    .col-lg-#{$i} {
         grid-column: span #{$i};
     }
     }

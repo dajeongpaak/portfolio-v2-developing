@@ -11,8 +11,6 @@
     text-transform: uppercase;
     padding: 2.5rem 1.5rem;
     color: $color-primary-dark;
-    font-size: $font-size-h3;
-    font-weight: 400;
 }
 
 .contact {
@@ -37,8 +35,11 @@
     color: $color-primary-light;
 
     p {
-        margin-bottom: unset;
         margin-left: 2rem;
+
+        @include mq(medium) {
+            margin-left: 4rem;
+        }
     }
 
     &__icon {
@@ -50,6 +51,9 @@
             fill: $color-primary-light;
             padding-left: 1rem;
         }
-    
+        
+        @include mq(medium) {
+            margin-right: 4rem;
+        }
     }
 }
