@@ -7,6 +7,19 @@
     flex-direction: column;
     background: $color-primary-light;
     @include block($color-primary-light);
+    padding: 5rem 1.5rem 3rem;
+    
+    @include mq(small) {
+        padding: 5rem 2rem 3rem;
+    }
+
+    @include mq(medium) {
+        padding: 6rem 3rem 4rem;
+    }
+
+    @include mq(large) {
+        padding: 5rem 6rem;
+    }
 
     &:last-child {
         margin-bottom: $header-height;
@@ -19,11 +32,18 @@
         width: 1.3rem;
         fill: $color-primary-dark;
 
+        @include mq(small) {
+            top: 2rem;
+            right: 2rem;
+            width: 1.5rem;
+        }
+
         @include mq(medium) {
             top: 3rem;
             right: 3rem;
             width: 1.7rem;
         }
+
     }
 
 
@@ -39,8 +59,33 @@
 
     img {
         max-width: 100%;
+        margin-bottom: 1.5rem;
+
+        @include mq(large){
+            margin-bottom: unset;
+        }
+    }
+
+    
+}
+
+.content {
+    
+    @include mq(large){
+        align-self: self-end;
+        padding-left: 3.5rem;
     }
 }
 
+.discipline {
+    display: flex;
+    flex-wrap: wrap;
 
-
+    div {
+        font-size: $font-size-14p;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: underline;
+        padding: 0.1rem 0.5rem 0.3rem 0 ;
+    }
+}

@@ -1,5 +1,4 @@
-@use '../../../styles/abstracts/variables' as *;
-@use '../../../styles/abstracts/mixins' as *;
+@use '../../../styles/abstracts' as *;
 
 .container {
     background: $color-primary-dark;
@@ -13,6 +12,18 @@
     @include block($color-primary-light);
     padding: 2.5rem 1.5rem;
     font-weight: 400;
+
+    @include mq(large) {
+        text-align: unset;
+    }
+
+    h3 {
+        
+        @include mq(large) {
+        margin-left: 4rem;
+        text-align: unset;
+        }
+    }
 }
 
 

@@ -6,11 +6,7 @@ function WorkHome() {
   return (
     <div>
       <div className={`grid container ${styles.container}`}>
-      <Card />
-        {/* <Routes>
-          <Route path='/' element={<Card />} />
-          <Route path='/jade-bookmark-manager-project' element={<Jade />}/>
-        </Routes> */}
+      <Card className='col-lg-6'/>
     </div>
     </div>
   )

@@ -16,7 +16,7 @@ section {
 
 .container {
     padding: 0 .5rem;
-    max-width: 90rem;
+    // max-width: 90rem;
     margin: 0 auto;
 
     @include mq(large) {

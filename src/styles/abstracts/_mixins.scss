@@ -16,4 +16,9 @@
         border-radius: $border-radious-md;
         padding: 7rem 2.5rem;
     }
+
+    @include mq(large) {
+        padding: 7rem 5.5rem;
+    }
 }
+

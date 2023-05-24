@@ -6,15 +6,15 @@ function Footer() {
 
   return (
     <div className={`${styles.container} grid container`}>
-       <div className={`${styles.getInTouch} col-12`}>
+       <div className={`${styles.getInTouch} col-12 col-lg-6`}>
           <p className='h4'>Get In Touch!</p>
        </div>
-       <div className={`${styles.contact} col-12 h5`}>
+       <div className={`${styles.contact} col-12 col-lg-6 h5`}>
           <div>
             <a href={`mailto:${email}`}>{email}</a>
           </div>
           <div className={`${styles.socialMedia}`}>
-            <p className='desc'>&copy;{new Date().getFullYear()}</p>
+            <p className='description'>&copy;{new Date().getFullYear()}</p>
             <div className={`${styles.socialMedia__icon}`}>
               <a href="https://www.linkedin.com/in/dajeong-park-4956bb255/" target='_blank'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
