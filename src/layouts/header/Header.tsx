@@ -12,7 +12,7 @@ function Header() {
       <nav className={styles.nav}>
           <ul className={styles.flex}>
             <li className={styles.nav__logo}>
-              <Link to="/">DAJEONGPARK</Link>
+              <Link to="/">DJ</Link>
             </li> 
             <li className={styles.nav__item}>
               <Link to="/about">ABOUT</Link>

@@ -13,11 +13,12 @@
 
 .nav {
    font-size: $font-size-h5;
+
    background: $color-primary-light;
 
-   &__logo {
-    font-weight: $font-weight-900;
-   }
+//    &__logo {
+//     font-weight: $font-weight-900;
+//    }
 
    &__item {
     font-weight: $font-weight-400;
@@ -25,18 +26,18 @@
 
    ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 
     @include mq(large){
-        justify-content: space-between;
+        // justify-content: space-between;
     }
    }
 
    li {
-    padding: 1rem 0;
+    padding: 0.5rem;
 
     @include mq(large){
-        padding: 1rem 2rem;
+        padding: 1rem 1rem 0;
     }
    }
 
