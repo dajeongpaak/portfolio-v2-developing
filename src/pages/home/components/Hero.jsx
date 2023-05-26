@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState ,useEffect, useRef } from 'react'
 
 import styles from './Hero.module.scss'
 import imageHey from '../../../assets/images/hey.png'
@@ -10,13 +10,22 @@ import imageCircle from '../../../assets/images/cir-1.png'
 import imageCircle2 from '../../../assets/images/cir-2.png'
 import imageCircle3 from '../../../assets/images/cir-3.png'
 
-import { Bodies, Composite, Engine, Runner, Render } from "matter-js"
+import { Bodies, Composite, Engine, Runner, Render, Body, Vector } from "matter-js"
 
 function Hero() {
     const heroRef = useRef();
-   
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight, 
+    })
+
+  
+
+    // window.onresize = handleResize;
+    
     useEffect(() => {
- 
+      
+
         // create an engine
         var engine = Engine.create(),
             world = engine.world;
@@ -148,8 +157,39 @@ function Hero() {
         // run the engine
         Runner.run(runner, engine);
 
+        const handleResize = (heroRef) => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight, 
+
+               
+            })
+
+            // render.canvas.width = heroRef.current.clientWidth
+            // render.canvas.height = heroRef.current.clientHeight
+
+            // Body.setPosition(
+            //     ground, Vector.create(
+            //         heroWidth / 2, 
+            //         heroHeight
+            //     )
+            // )
+
+            // Body.setPosition(
+            //     rightwall, Vector.create(
+            //         heroWidth,
+            //         heroHeight / 2
+            //     )
+            // )
+
+        
+        }
+        window.addEventListener('resize', handleResize)
+
         // prevent from rendering this component twice by strict mode
         return () => {
+
+            window.removeEventListener('resize', handleResize)
             // Stop the renderer and runner
             Render.stop(render);
             Runner.stop(runner);
@@ -160,8 +200,12 @@ function Hero() {
             render.canvas.remove()
             render.canvas = null
             render.context = null
-          }
-    },[])
+
+            // Remove the event listener when the component unmounts
+            
+            }
+    },)
+
   return (
     <section
         ref={heroRef}

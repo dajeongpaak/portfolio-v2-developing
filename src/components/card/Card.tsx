@@ -24,7 +24,7 @@ const items: Item[] = projects as Item[]
     return (
         <>
             {items.map((item, index) => (
-                <article className={`${styles.card} ${props.className}`}>
+                <article  key={index} className={`${styles.card} ${props.className}`}>
                     <Link to={item.url} key={index} >
                         <div className='grid'>
                             <Arrow />

@@ -2,7 +2,7 @@
 
 .btn {
     padding: 1rem;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.2);
     border-radius: 0.7rem;
     border: 0.1px $color-primary-light solid;
     @include flex-center;
@@ -17,7 +17,6 @@
     }
 
     &:hover, &:active {
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-        border: 0.1px rgba(0, 0, 0, 0.2) solid;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
     }
 }
