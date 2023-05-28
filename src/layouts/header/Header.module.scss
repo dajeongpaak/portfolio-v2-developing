@@ -5,20 +5,28 @@
     position: fixed;
     z-index: 999;
     bottom: 0;
-
+    mix-blend-mode: difference;
     @include mq(large){
         bottom: unset;
+    }
+
+    a {
+        color: $color-primary-light;
     }
 }
 
 .nav {
    font-size: $font-size-h5;
 
-   background: $color-primary-light;
+//    background: $color-primary-light;
 
 //    &__logo {
 //     font-weight: $font-weight-900;
 //    }
+
+    .logo {
+        fill: $color-highlight-orange;
+    }
 
    &__item {
     font-weight: $font-weight-400;
