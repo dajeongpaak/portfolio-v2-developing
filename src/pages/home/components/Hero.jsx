@@ -60,7 +60,7 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
 
-        var name = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 780 * scaleFactor,  {
+        var name = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 760 * scaleFactor,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -85,7 +85,7 @@ function Hero() {
             });
             
         
-        var iam = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 780 * scaleFactor,  {
+        var iam = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 760 * scaleFactor,  {
             density: 0.04,
             friction: 0.01,
             frictionAir: 0.000001,
@@ -109,7 +109,7 @@ function Hero() {
                 yScale: scaleFactor * 0.9 }}
             });
         
-        var circle = Bodies.circle(heroWidth / 2.85, heroHeight / 1.42, 110 * scaleFactor, {
+        var circle = Bodies.circle(heroWidth / 2.85, heroHeight / 1.43, 110 * scaleFactor, {
             isStatic: true,
             render: { 
             sprite: { 
