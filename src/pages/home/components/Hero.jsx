@@ -282,7 +282,7 @@ function Hero() {
         ref={heroRef}
         className={`${styles.container} ${styles.section}` }
     >
-    <h1>Hey there, I am DJ and I am a front-end developer</h1>
+    <h1>He there, I am DJ and I am a front-end developer</h1>
     </section>
     
   )
