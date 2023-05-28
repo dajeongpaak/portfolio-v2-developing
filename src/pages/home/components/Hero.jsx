@@ -19,6 +19,13 @@ function Hero() {
         height: window.innerHeight, 
     })
  
+    const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight, 
+        })
+    }
+
     useEffect(() => {
         let width = window.innerWidth
         let height = window.innerHeight
@@ -230,31 +237,6 @@ function Hero() {
         // run the engine
         Runner.run(runner, engine);
 
-        const handleResize = () => {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight, 
-            })
-
-            // render.canvas.width = heroRef.current.clientWidth
-            // render.canvas.height = heroRef.current.clientHeight
-
-            // Body.setPosition(
-            //     ground, Vector.create(
-            //         heroWidth / 2, 
-            //         heroHeight
-            //     )
-            // )
-
-            // Body.setPosition(
-            //     rightwall, Vector.create(
-            //         heroWidth,
-            //         heroHeight / 2
-            //     )
-            // )
-
-        
-        }
         window.addEventListener('resize', handleResize)
 
         // prevent from rendering this component twice by strict mode
@@ -275,7 +257,7 @@ function Hero() {
             // Remove the event listener when the component unmounts
             
             }
-    },)
+    }, [handleResize])
 
   return (
     <section
