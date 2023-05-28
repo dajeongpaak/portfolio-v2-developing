@@ -1,6 +1,6 @@
 {
   "name": "portfolio-ver2",
-  "homepage": "https://portfolio.dajeongpark.com",
+  "homepage": "https://portfolio.dajeongpark.com/public/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
