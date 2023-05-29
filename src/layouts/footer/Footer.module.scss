@@ -21,7 +21,6 @@
     @include block($color-highlight-orange);
     @include flex-center;
     padding: 6rem 1.5rem;
-    margin-bottom: $header-height;
 
     @include mq(large){
         margin-bottom: unset;

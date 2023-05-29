@@ -2,8 +2,11 @@
 
 * {
     scroll-behavior: smooth;
+    // height: 100%;
+
 }
 body {
+    height: 100%;
     background: $color-primary-light;
     font-family: $font-inter;
     line-height: 1.5;
@@ -29,3 +32,6 @@ a {
     color: $color-primary-dark;
 }
 
+.flex {
+    display: flex;
+}

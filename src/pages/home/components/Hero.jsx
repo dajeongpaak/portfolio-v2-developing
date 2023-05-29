@@ -1,4 +1,4 @@
-import { useState ,useEffect, useRef } from 'react'
+import { useState ,useEffect, useRef, useCallback } from 'react'
 
 import styles from './Hero.module.scss'
 import imageHey from '../../../assets/images/hey.png'
@@ -9,37 +9,38 @@ import imageFrontEnd from '../../../assets/images/frontend.png'
 import imageCircle from '../../../assets/images/cir-1.png'
 import imageCircle2 from '../../../assets/images/cir-2.png'
 import imageCircle3 from '../../../assets/images/cir-3.png'
+import debounce from 'lodash.debounce';
 
 import { Bodies, Composite, Engine, Runner, Render, Body, Vector, Mouse, MouseConstraint } from "matter-js"
 
+
+
+
 function Hero() {
     const heroRef = useRef();
+    // const canvas = useRef();
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight, 
     })
  
-    const handleResize = () => {
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight, 
-        })
-    }
 
     useEffect(() => {
-        let width = window.innerWidth
-        let height = window.innerHeight
+
+        const heroWidth = heroRef.current.clientWidth
+        const heroHeight = heroRef.current.clientHeight
+        // let width = window.innerWidth
+        // let height = window.innerHeight
         let actualPixel = 1000
         let expectedRatio = 0.18
-        let scaleFactor = width > height ? (width * expectedRatio) / actualPixel : (height * (expectedRatio * 1.2)) / actualPixel
+        let scaleFactor = heroWidth > heroHeight ? (heroWidth * expectedRatio) / actualPixel : (heroHeight * (expectedRatio * 1.2)) / actualPixel
         let scaleFactorCircle = scaleFactor * 1.6
         // create an engine
         var engine = Engine.create(),
             world = engine.world;
 
         // set physics container width and height
-        var heroWidth = heroRef.current.clientWidth
-        var heroHeight = heroRef.current.clientHeight
+        
 
         // create a renderer
         var render = Render.create({
@@ -237,12 +238,34 @@ function Hero() {
         // run the engine
         Runner.run(runner, engine);
 
-        window.addEventListener('resize', handleResize)
 
+
+        // handleResize(heroRef)
+
+        // const debounced = debounce(() => {
+        //     console.log('hahahahah')
+          
+        // }, 3000)
+        // debounced()
+
+     
+
+        const handleResize = () => {
+            setWindowSize({ 
+              // const heroWidth = heroRef.current.clientWidth
+              // const heroHeight = heroRef.current.clientHeight
+              width: window.innerWidth,
+              height: window.innerHeight, 
+          })}
+
+        const debouncedHandleResize =  debounce(handleResize, 100)
+
+        window.addEventListener('resize', debouncedHandleResize)
+      
         // prevent from rendering this component twice by strict mode
         return () => {
 
-            window.removeEventListener('resize', handleResize)
+            
             // Stop the renderer and runner
             Render.stop(render);
             Runner.stop(runner);
@@ -253,19 +276,20 @@ function Hero() {
             render.canvas.remove()
             render.canvas = null
             render.context = null
-
+            window.removeEventListener('resize', debouncedHandleResize)
             // Remove the event listener when the component unmounts
             
-            }
-    }, [handleResize])
+        }
+    },)
+
 
   return (
-    <section
+    <div
         ref={heroRef}
-        className={`${styles.container} ${styles.section}` }
+        className={`${styles.container}` }
     >
-    <h1>He there, I am DJ and I am a front-end developer</h1>
-    </section>
+    <h1>He there, I ams DJ and I am a front-end developer</h1>
+    </div>
     
   )
 }

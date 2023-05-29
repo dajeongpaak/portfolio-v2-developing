@@ -4,7 +4,6 @@
     width: 100%;
     position: fixed;
     z-index: 999;
-    bottom: 0;
     mix-blend-mode: difference;
     @include mq(large){
         bottom: unset;
@@ -18,14 +17,10 @@
 .nav {
    font-size: $font-size-h5;
 
-//    background: $color-primary-light;
-
-//    &__logo {
-//     font-weight: $font-weight-900;
-//    }
-
     .logo {
-        fill: $color-highlight-orange;
+        fill: $color-primary-light;
+        width: 1rem;
+        margin-left: 0.25rem;
     }
 
    &__item {
@@ -34,10 +29,11 @@
 
    ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 
     @include mq(large){
-        // justify-content: space-between;
+        padding: 0 1rem;
     }
    }
 
