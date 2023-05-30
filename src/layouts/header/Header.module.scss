@@ -21,6 +21,10 @@
         fill: $color-primary-light;
         width: 1rem;
         margin-left: 0.25rem;
+
+        @include mq(medium) {
+            width: 1.2rem;
+        }
     }
 
    &__item {
@@ -40,6 +44,13 @@
    li {
     padding: 0.5rem;
 
+    @include mq(small) {
+        padding: 0.7rem;
+    }
+
+    @include mq(medium) {
+        padding: 1rem;
+    }
     @include mq(large){
         padding: 1rem 1rem 0;
     }

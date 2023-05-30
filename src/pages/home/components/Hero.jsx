@@ -20,8 +20,8 @@ function Hero() {
     const heroRef = useRef();
     // const canvas = useRef();
     const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight, 
+        width: heroRef.innerWidth,
+        height: heroRef.innerHeight, 
     })
  
 
@@ -32,8 +32,8 @@ function Hero() {
         // let width = window.innerWidth
         // let height = window.innerHeight
         let actualPixel = 1000
-        let expectedRatio = 0.18
-        let scaleFactor = heroWidth > heroHeight ? (heroWidth * expectedRatio) / actualPixel : (heroHeight * (expectedRatio * 1.2)) / actualPixel
+        let expectedRatio = 0.19
+        let scaleFactor = heroWidth > heroHeight ? (heroWidth * expectedRatio) / actualPixel : (heroHeight * (expectedRatio * 1.1)) / actualPixel
         let scaleFactorCircle = scaleFactor * 1.6
         // create an engine
         var engine = Engine.create(),
@@ -56,9 +56,9 @@ function Hero() {
         });
 
         // create physics elements
-        var hey = Bodies.rectangle(heroWidth / 1.5, 0, 780 * scaleFactor, 780 * scaleFactor,  {
+        var hey = Bodies.rectangle(heroWidth / 1.2, 0, 780 * scaleFactor, 780 * scaleFactor,  {
             density: 0.04,
-		    friction: 0.01,
+		    friction: 1,
 		    frictionAir: 0.000001,
 		    restitution: 0.8,
             render: { 
@@ -68,9 +68,9 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
 
-        var name = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 760 * scaleFactor,  {
+        var name = Bodies.rectangle(heroWidth / 1.4, 0, 1320 * scaleFactor, 760 * scaleFactor,  {
             density: 0.04,
-            friction: 0.01,
+            friction: 1,
             frictionAir: 0.000001,
             restitution: 0.8,
             render: { 
@@ -80,9 +80,9 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
     
-        var dj = Bodies.circle(heroWidth / 5, 0, 420 * scaleFactor, {
+        var dj = Bodies.circle(heroWidth / 1.3, -100, 420 * scaleFactor, {
             density: 0.04,
-            friction: 0.01,
+            friction: 1,
             frictionAir: 0.000001,
             restitution: 0.8,
             render: { 
@@ -93,9 +93,9 @@ function Hero() {
             });
             
         
-        var iam = Bodies.rectangle(heroWidth / 5, 0, 1320 * scaleFactor, 760 * scaleFactor,  {
+        var iam = Bodies.rectangle(heroWidth / 4, -200, 1320 * scaleFactor, 760 * scaleFactor,  {
             density: 0.04,
-            friction: 0.01,
+            friction: 1,
             frictionAir: 0.000001,
             restitution: 0.8,
             render: { 
@@ -105,11 +105,12 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
     
-        var frontend = Bodies.rectangle(heroWidth / 5, 0, 2100 * scaleFactor, 780 * scaleFactor,  {
+        var frontend = Bodies.rectangle(heroWidth / 8, -1000, 2100 * scaleFactor, 780 * scaleFactor,  {
             density: 0.04,
-            friction: 0.01,
+            friction: 1,
             frictionAir: 0.000001,
             restitution: 0.8,
+            timeScale: 0.7,
             render: { 
             sprite: { 
                 texture: imageFrontEnd, 
@@ -254,17 +255,16 @@ function Hero() {
             setWindowSize({ 
               // const heroWidth = heroRef.current.clientWidth
               // const heroHeight = heroRef.current.clientHeight
-              width: window.innerWidth,
-              height: window.innerHeight, 
+                width: heroRef.innerWidth,
+                height: heroRef.innerHeight, 
           })}
 
-        const debouncedHandleResize =  debounce(handleResize, 100)
+        const debouncedHandleResize =  debounce(handleResize, 1000)
 
         window.addEventListener('resize', debouncedHandleResize)
-      
+          
         // prevent from rendering this component twice by strict mode
         return () => {
-
             
             // Stop the renderer and runner
             Render.stop(render);
