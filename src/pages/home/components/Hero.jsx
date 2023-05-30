@@ -56,7 +56,7 @@ function Hero() {
         });
 
         // create physics elements
-        var hey = Bodies.rectangle(heroWidth / 1.2, 0, 780 * scaleFactor, 780 * scaleFactor,  {
+        var hey = Bodies.rectangle(heroWidth / 1.12, 0, 780 * scaleFactor, 780 * scaleFactor,  {
             density: 0.04,
 		    friction: 1,
 		    frictionAir: 0.000001,
@@ -80,7 +80,7 @@ function Hero() {
                 yScale: scaleFactor  }}
             });
     
-        var dj = Bodies.circle(heroWidth / 1.3, -100, 420 * scaleFactor, {
+        var dj = Bodies.circle(heroWidth / 1.2, -300, 420 * scaleFactor, {
             density: 0.04,
             friction: 1,
             frictionAir: 0.000001,
@@ -205,7 +205,6 @@ function Hero() {
 
         mouseConstraint.mouse.element.removeEventListener(
             'touchmove',
-            mouseConstraint.mouse.mousemove
         );
 
         mouseConstraint.mouse.element.removeEventListener(
